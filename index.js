@@ -3,7 +3,7 @@ const app = express()
 
 app.route('/')
     .get((req,res) => {
-        res.sendFile('index.html', {root: 'client/public'})
+        res.sendFile('index.html', {root: 'build'})
     })
 
 app.listen(3000 || process.env.PORT, () => console.log("Listening on port..."))
