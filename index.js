@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const PORT = 5000 || process.env.PORT;
+const PORT =  process.env.PORT || 3306;
 
 console.log("MUXONE")
 if(process.env.NODE_ENV === "production"){
