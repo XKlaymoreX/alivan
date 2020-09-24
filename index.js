@@ -1,9 +1,9 @@
 const express = require('express')
+const path = require('path')
 const app = express()
+const PORT = 5000 || process.env.PORT
 
-app.route('/')
-    .get((req,res) => {
-        res.sendFile('index.html', {root: 'build'})
-    })
 
-app.listen(3000 || process.env.PORT, () => console.log("Listening on port..."))
+app.use(express.static(path.join(__dirname,"client","build")))
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
