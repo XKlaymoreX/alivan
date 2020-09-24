@@ -3,7 +3,6 @@ import backgroundImage from '../media/wedding.jpg'
 const Header : React.FC = () => {
     return (
         <div className="header container-fluid d-flex justify-content-center align-items-center text-white" style={{
-            width:'100vw',
             height:'100vh',
             backgroundImage:`url(${backgroundImage})`,
             backgroundSize:'cover',
