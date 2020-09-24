@@ -4,7 +4,8 @@
   "description": "Wedding",
   "main": "index.js",
   "engines": {
-    "node": "12.*"
+    "node": "10.*",
+    "npm":"6.14.*"
   },
   "scripts": {
     "start": "node index.js"
