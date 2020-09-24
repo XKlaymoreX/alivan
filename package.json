@@ -7,9 +7,9 @@
     "node": "12.*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "start" : "node index.js"
+    "test":"echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.js",
+    "start":"node index.js"
   },
   "author": "Cristian George Hoza Amadeus Terzo",
   "license": "MIT",
