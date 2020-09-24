@@ -4,7 +4,7 @@ const app = express()
 const PORT =  process.env.PORT || 3306;
 
 console.log("MUXONE")
-if(process.env.NODE_ENV === "production"){
+if(process.env.NODE_ENV === "production" ){
     app.use(express.static("client/build"))
     console.log("Muxone")
     app.get("*",(req,res) => {
