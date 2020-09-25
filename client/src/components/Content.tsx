@@ -1,10 +1,18 @@
 import React from 'react'
+import '../styles/Content.css'
 
 const Content = () => {
+
     return (
-        <div>   
-            <h2>Alice nel paese delle scope investite</h2>
-            <h1>Dovresti mandarmi un template... don't u think, huh?</h1>
+        <div className="myContent d-flex justify-content-center" style={{backgroundColor:'#eee'}}>   
+            <div className="myForm d-flex flex-column align-items-center rounded shadow-lg" style={{backgroundColor:'violet',width:'80%', height:'auto', margin:'20px 0 20px 0', padding:'20px'}}>
+                <label className="align-self-start" >Sarete Presenti?</label>
+                <input type="radio"></input>
+                <label className="align-self-start" >Nome Famiglia</label>
+                <input type="Text" className="myTextBox" placeholder="Nome famiglia..." ></input>
+                <label className="align-self-start" >Numero di Presenti</label>
+                <input type="Number" className="myTextBox" placeholder="Numero Persone..."></input>
+            </div>
         </div>
     )
 }

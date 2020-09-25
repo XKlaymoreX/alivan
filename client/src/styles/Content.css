@@ -1,0 +1,15 @@
+.myTextBox{
+    width:80%;
+    height: 35px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #eee;
+    outline: none;
+    background-color: transparent;
+    color:white;
+
+}
+.myTextBox::placeholder{
+    color: white;
+}
