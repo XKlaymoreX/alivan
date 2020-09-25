@@ -13,9 +13,9 @@
   "author": "Cristian George Hoza Amadeus Terzo",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "*",
     "express": "*",
-    "mongoose": "*",
-    "body-parser": "*"
+    "mongoose": "*"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
