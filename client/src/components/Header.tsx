@@ -10,52 +10,95 @@ const Header: React.FC = () => {
 
     return (
         <div className="imgSectionWrapper">
-            <div className="imgSection">
+            <div className="imgSection" >
                 <Carousel controls={false} fade={true} interval={4000}>
                     <Carousel.Item>
-                        <Carousel.Caption>
-                            <h2 style={{ fontFamily: 'Great Vibes', textShadow:'1px 1px black'}}>Welcome to</h2>
-                            <h1 style={{ fontFamily: 'Great Vibes', textShadow:'1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                        <Carousel.Caption className="d-flex flex-column justify-content-end">
+                            <div>
+                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                            </div>
+                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
+                                </svg>
+                                <span>Scroll Down</span>
+                            </a>
                         </Carousel.Caption>
                         <div className="img" style={{
                             backgroundImage: `url(${imgOne})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            transform: 'scale(1)',
-                            opacity:'85%'
-
+                            opacity: '85%',
+                            height:window.innerHeight
                         }}></div>
 
                     </Carousel.Item>
                     <Carousel.Item>
+                    <Carousel.Caption className="d-flex flex-column justify-content-end">
+                            <div>
+                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                            </div>
+                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
+                                </svg>
+                                <span>Scroll Down</span>
+                            </a>
+                        </Carousel.Caption>
                         <div className="img" style={{
                             backgroundImage: `url(${imgTwo})`,
                             backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            transform: 'scale(1)',
-                            opacity:'85%'
+                            backgroundPosition: '50% 25%',
+                            opacity: '85%',
+                            height:window.innerHeight
                         }}></div>
                     </Carousel.Item>
                     <Carousel.Item>
+                    <Carousel.Caption className="d-flex flex-column justify-content-end">
+                            <div>
+                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                            </div>
+                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
+                                </svg>
+                                <span>Scroll Down</span>
+                            </a>
+                        </Carousel.Caption>
                         <div className="img" style={{
                             backgroundImage: `url(${imgThree})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
-                            transform: 'scale(1)',
-                            opacity:'85%'
+                            opacity: '85%',
+                            height:window.innerHeight
                         }}></div>
                     </Carousel.Item>
                     <Carousel.Item>
+                    <Carousel.Caption className="d-flex flex-column justify-content-end">
+                            <div>
+                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                            </div>
+                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
+                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
+                                </svg>
+                                <span>Scroll Down</span>
+                            </a>
+                        </Carousel.Caption>
                         <div className="img" style={{
                             backgroundImage: `url(${imgFour})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
+                            opacity: '85%',
                             transform: 'scale(1)',
-                            opacity:'85%'
+                            height:window.innerHeight
                         }}></div>
                     </Carousel.Item>
                 </Carousel>
-
             </div>
         </div>
     )
