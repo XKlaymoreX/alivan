@@ -13,3 +13,18 @@
 .myTextBox::placeholder{
     color: white;
 }
+
+.infoGrid{
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 768px){
+    .infoGrid{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
