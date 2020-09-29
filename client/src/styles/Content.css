@@ -20,11 +20,72 @@
     justify-content: space-around;
 }
 
+.copyButton{
+    background-color: #DAA520;
+    padding: 0 10px 0 10px;
+    border-radius: 0 6px 6px 0;
+    color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyButton:hover{
+    cursor:pointer;
+}
+
+.myIban{
+    color:white;
+    display: flex;
+    font-size: 20px;
+    background-color: #bbb;
+    border:none;
+    width:50%;
+    border-radius: 6px 0 0 6px;
+    margin:10px 0 10px 0 ;
+    height: 30px;
+}
+
+.ibanText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    width: 80%;
+}
+
+.copyButton:active{
+    color:#DAA520;
+    background-color: white;
+    border: 0.5px solid #DAA520;
+}
+
 @media screen and (max-width: 768px){
     .infoGrid{
         display: flex;
         flex-flow: column;
         justify-content: space-around;
         align-items: center;
+    }
+
+    .ibanText{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: 100%;
+    }
+    .myIban{
+        width: 70%;
+        border-radius: 6px;
+    }
+
+    .copyButton{
+        border-radius: 6px;
+        padding:10px;
+        margin-bottom: 10px;
     }
 }

@@ -5,12 +5,16 @@ interface IInfoCard {
     info: string,
     details: string,
     hasLink: boolean,
-    href: string
+    href: string, 
+    questionMark: string
 }
 
 const InfoCard: React.FC<IInfoCard> = (props) => {
     return (
         <div className="myCard rounded shadow-lg d-flex flex-column justify-content-around" style={{ height: '250px', width: '300px', margin: '20px', padding: '10px', backgroundColor: 'white' }}>
+            <div className="myQuestion">
+                {props.questionMark}
+            </div>
             <div className="myImage">
                 <img src={props.svg}></img>
             </div>
