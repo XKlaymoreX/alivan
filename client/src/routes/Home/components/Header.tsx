@@ -15,14 +15,10 @@ const Header: React.FC = () => {
                     <Carousel.Item>
                         <Carousel.Caption className="d-flex flex-column justify-content-end">
                             <div>
-                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
                             </div>
                             <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
-                                </svg>
-                                <span>Scroll Down</span>
+                                <input type="button" className="goDownButton"  value="Partecipa"></input>
                             </a>
                         </Carousel.Caption>
                         <img src={imgOne} alt="Prima Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
@@ -30,14 +26,10 @@ const Header: React.FC = () => {
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
                             <div>
-                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
                             </div>
                             <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
-                                </svg>
-                                <span>Scroll Down</span>
+                                <input type="button" className="goDownButton"  value="Partecipa"></input>
                             </a>
                         </Carousel.Caption>
                         <img src={imgTwo} alt="Seconda Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
@@ -45,14 +37,10 @@ const Header: React.FC = () => {
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
                             <div>
-                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
                             </div>
                             <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
-                                </svg>
-                                <span>Scroll Down</span>
+                                <input type="button" className="goDownButton"  value="Partecipa"></input>
                             </a>
                         </Carousel.Caption>
                         <img src={imgThree} alt="Terza Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
@@ -60,14 +48,10 @@ const Header: React.FC = () => {
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
                             <div>
-                                <h2 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Welcome to</h2>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Alice & Ivan's Wedding</h1>
+                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
                             </div>
                             <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <svg width="2em" height="2em" viewBox="0 0 16 16" className="bi bi-mouse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8V5a4 4 0 0 0-8 0v6a4 4 0 0 0 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z" />
-                                </svg>
-                                <span>Scroll Down</span>
+                                <input type="button" className="goDownButton"  value="Partecipa"></input>
                             </a>
                         </Carousel.Caption>
                         <img src={imgFour} alt="Quarta Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}} ></img>

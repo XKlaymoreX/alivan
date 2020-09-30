@@ -5,6 +5,22 @@
     top:50%;
     left:50%;
 }
+.goDownButton{
+    border-radius: 6px;
+    padding:10px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins';
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+.goDownButton:active{
+    color:  #DAA520;
+}
+
 
 
 
