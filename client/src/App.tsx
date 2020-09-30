@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header'
-import Content from './components/Content'
-import TopNav from './components/TopNav';
+import Home from './routes/Home/Home'
+import Private from './routes/Private/Private'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App d-flex flex-column">
-      <Header />
-      <Content />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Private" component={Private} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

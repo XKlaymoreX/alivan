@@ -7,9 +7,9 @@ import copy from 'copy-to-clipboard'
 
 const InfoSection: React.FC = () => {
 
-    const copyToClip = () => {
-        copy("IT 60 X054 2811 1010 0000 0123 456")
-    }
+    // const copyToClip = () => {
+    //     copy("IT 60 X054 2811 1010 0000 0123 456")
+    // }
 
     return (
         <div className="infoSection">

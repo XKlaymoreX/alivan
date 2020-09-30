@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <img src={imgOne} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
+                        <img src={imgOne} alt="Prima Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <img src={imgTwo} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
+                        <img src={imgTwo} alt="Seconda Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <img src={imgThree} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
+                        <img src={imgThree} alt="Terza Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <img src={imgFour} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}} ></img>
+                        <img src={imgFour} alt="Quarta Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}} ></img>
                     </Carousel.Item>
                 </Carousel>
             </div>

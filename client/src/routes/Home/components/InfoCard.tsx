@@ -16,7 +16,7 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
                 {props.questionMark}
             </div>
             <div className="myImage">
-                <img src={props.svg}></img>
+                <img src={props.svg} alt=""></img>
             </div>
             <div className="myInfo" style={{ color: '#AAA', fontFamily: 'Poppins' }}>
                 {props.info}
