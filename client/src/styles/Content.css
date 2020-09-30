@@ -1,18 +1,4 @@
-.myTextBox{
-    width:80%;
-    height: 35px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid #eee;
-    outline: none;
-    background-color: transparent;
-    color:white;
 
-}
-.myTextBox::placeholder{
-    color: white;
-}
 
 .infoGrid{
     display:flex;
@@ -64,6 +50,71 @@
     border: 0.5px solid #DAA520;
 }
 
+/*FORM STYLING*/
+
+
+.myForm{
+    display: flex;
+    flex-flow: column;
+    width:70%;
+    margin:30px;
+    font-family: 'Poppins';
+}
+
+.formRow{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+}
+
+.label{
+    align-self: flex-start;
+    margin-left: 10%;
+}
+
+.myTextBox{
+    width:80%;
+    height: 35px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #eee;
+    outline: none;
+    background-color: transparent;
+    color:#DAA520;
+}
+.myTextBox::placeholder{
+    color: #DAA520;
+}
+
+.goButton{
+    background-color: #DAA520;
+    border: none;
+    border-radius: 6px;
+    padding:10px;
+    color:white;
+    outline: none;
+}
+
+.goButton:active{
+    background-color: white;
+    border: 0.5px solid black;
+    color:#DAA520;
+}
+
+.formQuestion{
+    display: flex;
+    flex-flow: column;
+}
+
+.formQuestion span{
+    font-size: 30px;
+}
+
+
+
 @media screen and (max-width: 768px){
     .infoGrid{
         display: flex;
@@ -87,5 +138,12 @@
         border-radius: 6px;
         padding:10px;
         margin-bottom: 10px;
+    }
+
+    .myForm{
+        display: flex;
+        flex-flow: column;
+        width:100%;
+        font-family: 'Poppins';
     }
 }

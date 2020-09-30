@@ -7,7 +7,7 @@ const Content: React.FC = () => {
 
     return (
         <div className="myContent d-flex flex-column">
-            <div className="infoSection contatiner-fluid shadow-sm">
+            <div className="infoSection contatiner-fluid ">
                 <InfoSection />
             </div>
             <div className="formSection d-flex justify-content-center">
