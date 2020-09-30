@@ -23,11 +23,10 @@ const InfoSection: React.FC = () => {
             </div>
             <div className="ibanSection container-fluid shadow-sm d-flex justify-content-center align-items-center flex-column" style={{ fontFamily: 'Poppins', height: 'auto' }}>
                 <h4>Contribuzioni</h4>
-                <div className="ibanText">
+                {/* <div className="ibanText container-fluid">
                     <input className="myIban" type="text" id="myIban" value="IT 60 X054 2811 1010 0000 0123 456" disabled={true}></input>
                     <div className="copyButton" onClick={() => copyToClip()}>Copia</div>
-                </div>
-
+                </div> */}
             </div>
         </div>
     )

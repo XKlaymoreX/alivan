@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     return (
         <div className="imgSectionWrapper">
             <div className="imgSection" >
-                <Carousel controls={false} fade={true} interval={4000}>
+                <Carousel controls={false} fade={true}  interval={5000} >
                     <Carousel.Item>
                         <Carousel.Caption className="d-flex flex-column justify-content-end">
                             <div>
@@ -25,14 +25,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <div className="img" style={{
-                            backgroundImage: `url(${imgOne})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            opacity: '85%',
-                            height:window.innerHeight
-                        }}></div>
-
+                        <img src={imgOne} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -47,13 +40,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <div className="img" style={{
-                            backgroundImage: `url(${imgTwo})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: '50% 25%',
-                            opacity: '85%',
-                            height:window.innerHeight
-                        }}></div>
+                        <img src={imgTwo} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -68,13 +55,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <div className="img" style={{
-                            backgroundImage: `url(${imgThree})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            opacity: '85%',
-                            height:window.innerHeight
-                        }}></div>
+                        <img src={imgThree} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
                     </Carousel.Item>
                     <Carousel.Item>
                     <Carousel.Caption className="d-flex flex-column justify-content-end">
@@ -89,14 +70,7 @@ const Header: React.FC = () => {
                                 <span>Scroll Down</span>
                             </a>
                         </Carousel.Caption>
-                        <div className="img" style={{
-                            backgroundImage: `url(${imgFour})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            opacity: '85%',
-                            transform: 'scale(1)',
-                            height:window.innerHeight
-                        }}></div>
+                        <img src={imgFour} style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}} ></img>
                     </Carousel.Item>
                 </Carousel>
             </div>
