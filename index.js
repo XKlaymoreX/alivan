@@ -2,14 +2,18 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const PORT =  process.env.PORT || 3306;
+const dotenv = require('dotenv')
+dotenv.config({path:'./.env'})
 
+app.use(express.static("client/build"))
 
 if(process.env.NODE_ENV == "production"){
-    console.log("Produzione")
-    app.use(express.static("client/build"))
-    app.get("*",(req,res) => {
+    app.use('/Private', require('./routes/private'))
+    app.get("/*",(req,res) => {
         res.sendFile(path.resolve(__dirname,"client","build","index.html"))
     })
+}else{
+    app.use("/", require('./routes/private'))
 }
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

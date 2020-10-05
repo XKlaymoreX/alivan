@@ -17,7 +17,7 @@ const InfoSection: React.FC = () => {
                 <h2>Informazioni Utili</h2>
             </div>
             <div className="infoGrid">
-                <InfoCard svg={CalendarSVG} questionMark="Quando?" info="01/07/2021" details="1 Luglio 2021" href={""} hasLink={false} />
+                <InfoCard svg={CalendarSVG} questionMark="Quando?" info="01/07/2021" details="1 Luglio 2021 - Ore: 11:30" href={""} hasLink={false} />
                 <InfoCard svg={MapSVG} questionMark="Dove?" info="Monforte d'Alba" details="Vai alla Mappa" href={"https://goo.gl/maps/5yWbVswnEs46aqeA9"} hasLink={true} />
                 <InfoCard svg={RestaurantSVG} questionMark="Ristorante?" info="Ristorante" details="La Torricella" href={"http://www.latorricella.eu/it/"} hasLink={true} />
             </div>
