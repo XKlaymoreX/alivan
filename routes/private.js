@@ -1,12 +1,49 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path')
-
+const crypto = require('crypto-js')
+const db = require('../model/db')
+const userSchema = require('../model/userSchema')
+const bcrypt = require('bcrypt')
 
 router.route("/")
-    .get((req,res) => {
+    .get((req, res) => {
         res.status(200)
-        res.sendFile(path.resolve('client','build','index.html'))
+        res.sendFile(path.resolve('client', 'build', 'index.html'))
+    })
+
+router.route("/Register")
+    .post((req, res) => {
+        const salt = bcrypt.genSaltSync(10)
+        const hashedPassword = bcrypt.hashSync(req.body.password, salt)
+
+        const user = new userSchema({ user: req.body.user, password: hashedPassword })
+        console.log(user)
+        user.save()
+        res.sendStatus(200)
+    })
+
+router.route("/Login")
+    .post(async (req, res) => {
+        const sentPassword = crypto.AES.decrypt(req.body.password, "2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQeThWmZq4t7w!z%C*F-JaNdRgU").toString(crypto.enc.Utf8)
+        
+        try {
+            const userFound = await userSchema.find({ user: req.body.user })
+            if (userFound.length > 0) {
+                const comparison = await bcrypt.compare(sentPassword, userFound[0].password)
+                if (comparison) {
+                    return res.sendStatus(200)
+                }else{
+                    res.status(403)
+                    return res.send({message: `Password not matching user: ${userFound[0].user}`})
+                }
+            }else{
+                res.status(403)
+                return res.send({message: `User '${req.body.user}' not found`})
+            }
+        } catch (error) {
+            console.log(error)
+        }
     })
 
 

@@ -1,0 +1,100 @@
+ .myPrivate{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.myPrivateContent{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.myContentSection{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background-color: #fff;
+}
+
+.formLabel{
+    align-self: flex-start;
+}
+.myFormContent{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.myFormContent input{
+    border:none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    color: black;
+}
+
+.myFormContent button{
+    font-family: 'Poppins';
+    background-color:white;
+    color:black;
+    margin-top:20px;
+    border-radius: 6px;
+    border:1px solid black;
+    outline:none;
+    font-weight: bold;
+    
+}
+
+.myFormContent button:hover{
+    background-color: black;
+    color:white;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+.myHeader{
+    background-color: #ccc;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.myHeader span{
+    color:black;
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+
+.myLink{
+    background-color: black;
+    color:white;
+    padding: 10px;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    margin-bottom: 10px;
+}
+
+
+.myLink:hover{
+    text-decoration: none;
+    background-color: white;
+    border: 0.5px solid black;
+    color: black;
+    
+}

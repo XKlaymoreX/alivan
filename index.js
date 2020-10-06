@@ -1,25 +1,17 @@
 const express = require('express')
-const path = require('path')
 const app = express()
 const PORT = process.env.PORT || 3306;
-
-
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
 app.use(express.static("client/build"))
-
 if (process.env.NODE_ENV == "production") {
-
     app.use('/Private', require('./routes/private'))
-
-
     //404 Route
     app.get("*", (req, res) => {
         res.status(404).send("Page Not Found")
     })
 } else {
     app.use('/Private', require('./routes/private'))
-    app.get("/*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-    })
 }
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

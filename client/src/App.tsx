@@ -11,7 +11,8 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Private" component={Private} />
+          <Route path="/Private" component={Private} />
+          <Route exact path="/*" component={Home} />
         </Switch>
       </div>
     </Router>
