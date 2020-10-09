@@ -18,8 +18,10 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "*",
+    "cookie-parser": "^1.4.5",
     "crypto-js": "^4.0.0",
     "express": "*",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.8"
   },
   "devDependencies": {

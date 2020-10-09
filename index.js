@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3306;
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+
+app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(express.static("client/build"))
 if (process.env.NODE_ENV == "production") {

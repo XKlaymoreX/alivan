@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {Redirect} from 'react-router-dom'
 import axios from 'axios'
-import { data } from 'jquery'
 import crypto from 'crypto-js'
+import {userContext} from '../../Contexts/UserContext'
 
 const Content: React.FC = () => {
 
+    const [state,dispatch] = useContext(userContext)
     const [loginResponse, setLoginResponse] = useState<string>("")
     const [redirect, setRedirect] = useState<boolean>(false)
 

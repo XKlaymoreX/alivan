@@ -1,11 +1,9 @@
-import React from 'react'
-
-const types = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export interface IUser {
+    id: string,
+    user: string
 }
 
-export default types
+export interface UserAction {
+    type : 'Login' | 'Logout',
+    payload : any
+}
