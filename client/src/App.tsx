@@ -4,12 +4,10 @@ import Home from './routes/Home/Home'
 import Private from './routes/Private/Private'
 import Dashboard from './routes/Dashboard/Dashboard'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { UserContext } from './routes/Contexts/UserContext'
 
 
 function App() {
   return (
-    <UserContext>
       <Router>
         <div className="App">
           <Switch>
@@ -20,7 +18,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </UserContext>
   );
 }
 

@@ -3,7 +3,7 @@ import InfoCard from './InfoCard'
 import CalendarSVG from '../media/svgs/calendar.svg'
 import MapSVG from '../media/svgs/map.svg'
 import RestaurantSVG from '../media/svgs/restaurant.svg'
-import copy from 'copy-to-clipboard'
+// import copy from 'copy-to-clipboard'
 
 const InfoSection: React.FC = () => {
 

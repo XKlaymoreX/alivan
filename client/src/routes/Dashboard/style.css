@@ -1,0 +1,16 @@
+.invitationsGrid {
+    max-width: 600px;
+}
+
+.counter {
+    max-width: 600px;
+}
+
+@media (max-width:768px) {
+    .invitationsGrid {
+        max-width: 100%;
+    }
+    .counter {
+        max-width: 600px;
+    }
+}

@@ -1,33 +1,29 @@
-import React, { useState, useContext } from 'react'
+import React, {useState} from 'react'
 import {Redirect} from 'react-router-dom'
 import axios from 'axios'
 import crypto from 'crypto-js'
-import {userContext} from '../../Contexts/UserContext'
 
 const Content: React.FC = () => {
 
-    const [state,dispatch] = useContext(userContext)
     const [loginResponse, setLoginResponse] = useState<string>("")
     const [redirect, setRedirect] = useState<boolean>(false)
 
     const Login = async () => {
         const user = (document.getElementById('user') as HTMLInputElement).value
         const password = (document.getElementById('password') as HTMLInputElement).value
-
         const hashedPassword = crypto.AES.encrypt(password, "2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQeThWmZq4t7w!z%C*F-JaNdRgU")
         try {
-            const result = await axios.post("/Private/Login", { user: user, password: hashedPassword.toString() })
+            await axios.post("/Private/Login", { user: user, password: hashedPassword.toString() })
             return setRedirect(true)
         } catch (error) {
             return setLoginResponse(error.response.data.message)
         }
-
     }
 
     return (
         <div className="myPrivateContent">
             <div className="myContentSection shadow-lg rounded">
-                {redirect ? <Redirect to="/"></Redirect> : (<div />)}
+                {redirect ? <Redirect to="/Private/Dashboard"></Redirect> : (<div />)}
                 <h2>Accesso alla sezione inviti</h2>
                 <div className="myFormContent">
                     <label className="formLabel">Nome Utente</label>
