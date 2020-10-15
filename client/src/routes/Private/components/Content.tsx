@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Redirect} from 'react-router-dom'
+import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import crypto from 'crypto-js'
 
@@ -21,16 +21,16 @@ const Content: React.FC = () => {
     }
 
     return (
-        <div className="myPrivateContent">
+        <div className="myPrivateContent" style={{fontFamily:'Poppins'}}>
             <div className="myContentSection shadow-lg rounded">
+                <h3 style={{marginBottom:'30px'}}>Accesso Area Inviti</h3>
                 {redirect ? <Redirect to="/Private/Dashboard"></Redirect> : (<div />)}
-                <h2>Accesso alla sezione inviti</h2>
                 <div className="myFormContent">
                     <label className="formLabel">Nome Utente</label>
                     <input type="text" id="user" placeholder="Nome Utente..." onInput={() => setLoginResponse('')}></input>
                     <label className="formLabel">Password</label>
                     <input type="password" id="password" placeholder="Password..." onInput={() => setLoginResponse('')}></input>
-                    <span style={{color:'red', fontWeight:'bold', fontFamily:'Poppins'}}>{loginResponse}</span>
+                    <span style={{ color: 'red', fontWeight: 'bold', fontFamily: 'Poppins' }}>{loginResponse}</span>
                     <button type="submit" onClick={Login}>Procedi</button>
                 </div>
             </div>

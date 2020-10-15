@@ -98,3 +98,11 @@
     color: black;
     
 }
+
+
+@media (max-width: 576px){
+    .myContentSection{
+        width: 100%;
+        height: 100%;
+    }
+}
