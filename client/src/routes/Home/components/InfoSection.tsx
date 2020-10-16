@@ -13,7 +13,7 @@ const InfoSection: React.FC = () => {
 
     return (
         <div className="infoSection">
-            <div className="infoIntroduction container-fluid shadow-sm d-flex justify-content-center align-items-center" style={{ fontFamily: 'Poppins', height: '70px' }}>
+            <div className="infoIntroduction container-fluid shadow-sm d-flex justify-content-center align-items-center" style={{ fontFamily: 'Poppins', height: '70px' }} id="infoAnchor">
                 <h2>Informazioni Utili</h2>
             </div>
             <div className="infoGrid">

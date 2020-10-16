@@ -50,7 +50,7 @@ const Header: React.FC = () => {
                             <div>
                                 <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
                             </div>
-                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
+                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#infoAnchor">
                                 <input type="button" className="goDownButton"  value="Partecipa"></input>
                             </a>
                         </Carousel.Caption>

@@ -89,6 +89,10 @@
     color: #DAA520;
 }
 
+.redPlaceHolder::placeholder{
+    color:red
+}
+
 .goButton{
     background-color: #DAA520;
     border: none;
