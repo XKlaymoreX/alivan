@@ -30,3 +30,12 @@ exports.getInvitations = async (req, res) => {
         return res.sendStatus(500)
     }
 }
+exports.deleteInvitation = async (req, res) => {
+    try {
+        const result = await inviteSchema.findByIdAndDelete(req.params.id)
+        console.log(result)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
