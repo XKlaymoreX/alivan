@@ -3,6 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 3306;
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const db = require('./model/db')
 if (process.env.NODE_ENV != 'production') {
     const dotenv = require('dotenv').config()
 }

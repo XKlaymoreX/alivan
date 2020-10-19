@@ -50,5 +50,5 @@ exports.login = async (req,res) => {
 
 exports.logout = (req,res) => {
     res.clearCookie('Authorization')
-   return res.status(200)
+    return res.sendStatus(200)
 }

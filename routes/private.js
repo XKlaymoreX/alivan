@@ -21,5 +21,6 @@ router.route("/Login")
 
 router.route("/LogOut")
     .get((req,res) => logout(req,res))
+    
 
 module.exports = router
