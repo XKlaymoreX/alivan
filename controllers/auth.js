@@ -1,4 +1,3 @@
-const express = require('express')
 const jwt = require('jsonwebtoken')
 
 exports.checkProtection = (req,res,next) => {
@@ -18,7 +17,6 @@ exports.checkProtection = (req,res,next) => {
     }
 }
 exports.checkProtectionApi = (req,res,next) => {
-    console.log("Checking API rights")
     if (req.cookies.Authorization) {
         try {
             const tokenVer = jwt.verify(req.cookies.Authorization,process.env.JWT_SECRET)

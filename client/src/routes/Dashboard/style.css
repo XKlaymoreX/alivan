@@ -6,11 +6,30 @@
     max-width: 600px;
 }
 
+.itemsSelector{
+    max-width: 600px;
+}
+
+.commandSection{
+    max-width: 600px;
+}
+
+.controlButton:hover{
+    background-color: #ccc;
+    font-weight: bold;
+}
+
 @media (max-width:768px) {
     .invitationsGrid {
         max-width: 100%;
     }
+    .itemsSelector{
+        max-width: 100%;
+    }
     .counter {
-        max-width: 600px;
+        max-width: 100%;
+    }
+    .commandSection{
+        max-width: 100%;
     }
 }

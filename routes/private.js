@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 const {checkProtection} = require('../controllers/auth')
-const login = require('../controllers/private')
+const {login,logout} = require('../controllers/private')
 
 router.route("/")
     .get((req, res) => {
@@ -17,6 +17,9 @@ router.route("/Dashboard")
     })
 
 router.route("/Login")
-    .post(async (req, res) => login(req,res))
+    .post((req, res) => login(req,res))
+
+router.route("/LogOut")
+    .get((req,res) => logout(req,res))
 
 module.exports = router

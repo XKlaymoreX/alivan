@@ -1,33 +1,38 @@
-import React, { useState, useEffect } from 'react'
-import { IDashInvitation } from '../../types.d'
-import axios from 'axios'
-import Invitation from './components/Invitation'
+import React, { useState } from 'react'
+import ItemsGrid from './components/ItemsGrid'
+import Bin from './components/Bin'
 import './style.css'
+import {Redirect} from 'react-router-dom'
+import axios from 'axios'
 
 const Dashboard: React.FC = () => {
 
-    const [items, setItems] = useState<Array<IDashInvitation>>([])
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [isBinSelected, setBinSelected] = useState<boolean>(false)
+    const [nItems, setNItems] = useState<number>()
+    const [totals, setTotals] = useState<number>()
+    const [redirect,setRedirect] = useState<boolean>(false)
+    const [logOutRed,setLogOut] = useState<boolean>(false)
 
-    useEffect(() => {
-        const fetchItems = async () => {
-            try {
-                await axios.get('/api/v1/inviti').then(result => {
-                    setItems(result.data)
-                })
-                setIsLoading(false)
-            } catch (error) {
-                console.log(error)
-            }
+    const logOut = async () => {
+        try {
+            await axios.get('/Private/LogOut')
+            setLogOut(true)
+        } catch (error) {
+            console.log(error)
         }
-        fetchItems()
-    },[isLoading])
-
-
+    }
 
     return (
-        <div style={{ fontFamily: 'Poppins' }}>
+        <div className="d-flex flex-column" style={{ fontFamily: 'Poppins' }}>
+            {redirect ? <Redirect to="/"></Redirect> : <></>}
+            {logOutRed ? <Redirect to="/Private"></Redirect> : <></>}
             <h2>Lista Invitati</h2>
+            <div className="commandSection container-fluid rounded shadow-sm" style={{backgroundColor:'#eee', marginBottom:'10px',height:'50px'}}>
+                <div className="row h-100 text-black" style={{fontSize:'20px', userSelect:'none' , cursor:'pointer'}}>
+                    <div className="col-6 d-flex justify-content-center align-items-center border-right controlButton" onClick={() =>  setRedirect(true)}>Home</div>
+                    <div className="col-6 d-flex justify-content-center align-items-center border-left controlButton" onClick={() => logOut()} >Log Out</div>
+                </div>
+            </div>
             <div className="counter container-fluid rounded shadow-sm" style={{ backgroundColor: '#eee', padding: '20px 0 20px 0' }}>
                 <h5>Totali</h5>
                 <div className="row">
@@ -40,11 +45,17 @@ const Dashboard: React.FC = () => {
                 </div>
                 <div className="row">
                     <div className="col-6 d-flex justify-content-center align-items-center">
-                        {items.length}
+                        {nItems}
                     </div>
-                    <div className="col-6 d-flex justify-content-center align-items-center">{
-                        items.map((el: IDashInvitation) => { return el.presentsNumber }).reduce((total, current) => { return total + current }, 0)
-                    }</div>
+                    <div className="col-6 d-flex justify-content-center align-items-center">
+                        {totals}
+                    </div>
+                </div> 
+            </div>
+            <div className="itemsSelector container-fluid rounded shadow-sm" style={{ backgroundColor: '#eee', height: '100px', marginTop: '10px' }}>
+                <div className="row rounded text-white" style={{ height: '100%', fontSize: '20px' }}>
+                    <div className="col-6 d-flex justify-content-center align-items-center" style={{ backgroundColor: isBinSelected ? '#28A745' :  '#1d8233', borderTopLeftRadius: '6px', borderBottomLeftRadius: '6px', cursor:'pointer', userSelect:'none' }} onClick={() => setBinSelected(false)}>Invitati</div>
+                    <div className="col-6 d-flex justify-content-center align-items-center" style={{ backgroundColor: isBinSelected ? '#BF2F3B' : '#DC3545', borderBottomRightRadius: '6px', borderTopRightRadius: '6px', cursor:'pointer', userSelect:'none'  }} onClick={() => setBinSelected(true)}>Cestino</div>
                 </div>
             </div>
             <div className="container-fluid invitationsGrid rounded">
@@ -53,11 +64,7 @@ const Dashboard: React.FC = () => {
                     <div className="col-5 d-flex justify-content-center align-items-center">Numero Presenti</div>
                     <div className="col-2 d-flex justify-content-center align-items-center"></div>
                 </div>
-                {isLoading ? <h1>Uhm.. vediamo chi c'è</h1> : <>{items.map((el: IDashInvitation) => {
-                    return (
-                        <Invitation familyName={el.familyName} presentsNumber={el.presentsNumber} _id={el._id} key={el._id} loading={[isLoading,setIsLoading]} />
-                    )
-                })}</>}
+                {isBinSelected ? <Bin /> : <ItemsGrid calculationMethods={[setNItems, setTotals]} /> }
             </div>
         </div>
     )

@@ -1,12 +1,10 @@
-const express = require('express')
 const jwt = require('jsonwebtoken')
 const crypto = require('crypto-js')
-const db = require('../model/db')
 const userSchema = require('../model/userSchema')
 const bcrypt = require('bcrypt')
 
 
-module.exports = login = async (req,res) => {
+exports.login = async (req,res) => {
     const sentPassword = crypto.AES.decrypt(req.body.password, "2r5u8x/A?D(G+KaPdSgVkYp3s6v9y$B&E)H@McQeThWmZq4t7w!z%C*F-JaNdRgU").toString(crypto.enc.Utf8)
     try {
         const userFound = await userSchema.find({ user: req.body.user })
@@ -48,4 +46,9 @@ module.exports = login = async (req,res) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+exports.logout = (req,res) => {
+    res.clearCookie('Authorization')
+   return res.status(200)
 }
