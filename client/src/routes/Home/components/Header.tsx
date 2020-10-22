@@ -1,62 +1,31 @@
-import React from 'react'
-import imgOne from '../media/img1.jpg'
-import imgTwo from '../media/img2.jpg'
-import imgThree from '../media/img3.jpg'
-import imgFour from '../media/img4.jpg'
+import React, { useEffect } from 'react'
 import '../styles/Header.css'
-import Carousel from 'react-bootstrap/Carousel'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/src/ScrollTrigger'
 
 const Header: React.FC = () => {
 
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        const tl = gsap.timeline()
+            .from(".imgSectionWrapper", { x: '-300vw', ease: 'power2', duration: 2 })
+            .from(".imgSection", { filter: 'saturate(0%)', duration: 0.5 })
+            .from(".welcomeText", { opacity: 0, ease: 'power2', duration: 0.5 })
+            .from(".bi-chevron-compact-down", { opacity: 0, ease: 'power2', duration: 0.5 })
+
+        gsap.to(".imgSectionWrapper", { scrollTrigger: { trigger: '.imgSectionWrapper', pin: true } })
+
+    })
+
     return (
-        <div className="imgSectionWrapper">
-            <div className="imgSection" >
-                <Carousel controls={false} fade={true}  interval={5000} >
-                    <Carousel.Item>
-                        <Carousel.Caption className="d-flex flex-column justify-content-end">
-                            <div>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
-                            </div>
-                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <input type="button" className="goDownButton"  value="Partecipa"></input>
-                            </a>
-                        </Carousel.Caption>
-                        <img src={imgOne} alt="Prima Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                    <Carousel.Caption className="d-flex flex-column justify-content-end">
-                            <div>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
-                            </div>
-                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <input type="button" className="goDownButton"  value="Partecipa"></input>
-                            </a>
-                        </Carousel.Caption>
-                        <img src={imgTwo} alt="Seconda Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                    <Carousel.Caption className="d-flex flex-column justify-content-end">
-                            <div>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
-                            </div>
-                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#myForm">
-                                <input type="button" className="goDownButton"  value="Partecipa"></input>
-                            </a>
-                        </Carousel.Caption>
-                        <img src={imgThree} alt="Terza Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}}></img>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                    <Carousel.Caption className="d-flex flex-column justify-content-end">
-                            <div>
-                                <h1 style={{ fontFamily: 'Great Vibes', textShadow: '1px 1px black' }}>Benvenuti al nostro Matrimonio</h1>
-                            </div>
-                            <a style={{cursor:'pointer', textDecoration:'none', color:'white'}} href="#infoAnchor">
-                                <input type="button" className="goDownButton"  value="Partecipa"></input>
-                            </a>
-                        </Carousel.Caption>
-                        <img src={imgFour} alt="Quarta Immagine" style={{width:'100vw', objectFit:'cover', objectPosition:'center', height:window.innerHeight}} ></img>
-                    </Carousel.Item>
-                </Carousel>
+        <div className="imgSectionWrapper" style={{ zIndex: -1, height: window.innerHeight }}>
+            <div className="imgSection rounded shadow-lg">
+                <div className="welcomeText">Benvenuti Al Nostro Matrimonio</div>
+
+                <svg width="4em" height="2em" viewBox="0 0 16 16" className="bi bi-chevron-compact-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                </svg>
             </div>
         </div>
     )

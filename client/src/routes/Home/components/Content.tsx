@@ -6,7 +6,7 @@ import InfoSection from './InfoSection'
 const Content: React.FC = () => {
 
     return (
-        <div className="myContent d-flex flex-column">
+        <div className="myContent d-flex flex-column" style={{zIndex:+999, background:'white'}}>
             <div className="infoSection contatiner-fluid ">
                 <InfoSection />
             </div>
