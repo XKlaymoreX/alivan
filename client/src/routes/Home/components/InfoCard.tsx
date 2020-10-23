@@ -11,17 +11,17 @@ interface IInfoCard {
 
 const InfoCard: React.FC<IInfoCard> = (props) => {
     return (
-        <div className="myCard rounded shadow-lg d-flex flex-column justify-content-around" style={{ height: '250px', width: '300px', margin: '20px', padding: '10px', backgroundColor: 'white' }}>
+        <div className="myCard rounded shadow-lg ">
             <div className="myQuestion">
                 {props.questionMark}
             </div>
             <div className="myImage">
                 <img src={props.svg} alt=""></img>
             </div>
-            <div className="myInfo" style={{ color: '#AAA', fontFamily: 'Poppins' }}>
+            <div className="myInfo" style={{ color: '#AAA'}}>
                 {props.info}
             </div>
-            <div className="myDetails" style={{ color: 'black', fontFamily: 'Poppins' }}>
+            <div className="myDetails" style={{ color: 'black'}}>
                 {props.hasLink ? (<a href={props.href} style={{textDecoration:'none'}}>{props.details}</a>) : (<div>{props.details}</div>)}
             </div>
         </div>

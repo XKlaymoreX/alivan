@@ -1,167 +1,192 @@
- 
-.myContent{
-    height:100vh
-}
+ /*WHOLE CONTAINER OF INFOSECTION AND FORM SECTION*/
 
-.infoSectionContainer{
-    height:50%;
-}
+ .myContent {
+     height: 100vh;
+ }
 
-.formSection{
-    height:50%
-}
+ /*INFO SECTION TAKES 50% of the entire height*/
+
+ .infoSection {
+     height: 50%;
+     width: 100%;
+ }
+
+ /*FormSection Takes The 50% of the entire height*/
+
+ .formSection {
+     height: 50%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Poppins';
+ }
+
+ /*PARENT is InfoSection, this takes 20% of the parent's height*/
+
+ .infoIntroduction {
+     height: 20%;
+ }
+
+ /*PARENT is InfoSection, this takes 80% of the parent's height*/
+
+ .infoGrid {
+     height: 80%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ /*Parent is infoGrid, this is a single Card*/
+
+ .myCard {
+     background-color: white;
+     height: 90%;
+     width: 28%;
+     display: flex;
+     flex-flow: column;
+     justify-content: space-around;
+     font-family: 'Poppins';
+     font-size: 15px;
+ }
+
+ /*FORM STYLING*/
+
+ .myForm {
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: center;
+     width: 70%;
+     height: 90%;
+     background-color: white;
+     border-radius: 6px;
+ }
+
+ .formQuestion {
+     width: 100%;
+     height: 25%;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .formQuestion span {
+     font-size: 30px;
+ }
+
+ .formRow {
+     height: 25%;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: center;
+     width: 80%;
+ }
+
+ .formRow label {
+     height: 50%;
+     width: 100%;
+     display: flex;
+     justify-content: start;
+ }
+
+ .formRow input {
+     width: 100%;
+     height: 50%;
+ }
+
+ .formRowButton {
+     height: 25%;
+     width: 80%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .myTextBox {
+     width: 80%;
+     height: 100%;
+     border-top: none;
+     border-right: none;
+     border-left: none;
+     border-bottom: 2px solid #eee;
+     outline: none;
+     background-color: transparent;
+     color: #DAA520;
+ }
+
+ .myTextBox::placeholder {
+     color: #DAA520;
+ }
+
+ .redPlaceHolder::placeholder {
+     color: red
+ }
+
+ .goButton {
+     background-color: #DAA520;
+     border: none;
+     border-radius: 6px;
+     padding: 15px;
+     color: white;
+     outline: none;
+ }
+
+ .goButton:active {
+     background-color: white;
+     border: 0.5px solid black;
+     color: #DAA520;
+ }
+
+ @media screen and (max-width: 992px) {
+     .myContent {
+         height: auto;
+     }
+     .infoSection {
+         height: auto;
+     }
+     .infoGrid {
+         display: flex;
+         flex-flow: column;
+         justify-content: space-around;
+         align-items: center;
+     }
+     .formSection {
+         height: auto;
+     }
+     .myCard {
+         font-size: 20px;
+         width: 80%;
+         height: 40%;
+         margin-top: 20px;
+         margin-bottom: 20px;
+     }
+     .myForm {
+         width: 100%;
+         height: auto;
+         border-radius: 0;
+     }
+     .formRow {
+         margin-top: 15px;
+         margin-bottom: 15px;
+     }
+     .formRowButton {
+         margin-top: 15px;
+         margin-bottom: 15px;
+     }
+ }
 
 
-
-
-.infoGrid{
-    display:flex;
-    flex-flow: row;
-    justify-content: space-around;
-}
-
-.copyButton{
-    background-color: #DAA520;
-    padding: 0 10px 0 10px;
-    border-radius: 0 6px 6px 0;
-    color: white;
-    -webkit-user-select: none;
-    user-select: none;
-    -moz-user-select: none;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.copyButton:hover{
-    cursor:pointer;
-}
-
-.myIban{
-    color:white;
-    display: flex;
-    font-size: 20px;
-    background-color: #bbb;
-    border:none;
-    width:50%;
-    border-radius: 6px 0 0 6px;
-    margin:10px 0 10px 0 ;
-    height: 30px;
-}
-
-.ibanText{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row;
-    width: 80%;
-}
-
-.copyButton:active{
-    color:#DAA520;
-    background-color: white;
-    border: 0.5px solid #DAA520;
-}
-
-/*FORM STYLING*/
-
-
-.myForm{
-    display: flex;
-    flex-flow: column;
-    width:70%;
-    margin:30px;
-    font-family: 'Poppins';
-}
-
-.formRow{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    height: 80px;
-    padding: 20px;
-}
-
-.label{
-    align-self: flex-start;
-    margin-left: 10%;
-}
-
-.myTextBox{
-    width:80%;
-    height: 35px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 2px solid #eee;
-    outline: none;
-    background-color: transparent;
-    color:#DAA520;
-}
-.myTextBox::placeholder{
-    color: #DAA520;
-}
-
-.redPlaceHolder::placeholder{
-    color:red
-}
-
-.goButton{
-    background-color: #DAA520;
-    border: none;
-    border-radius: 6px;
-    padding:10px;
-    color:white;
-    outline: none;
-}
-
-.goButton:active{
-    background-color: white;
-    border: 0.5px solid black;
-    color:#DAA520;
-}
-
-.formQuestion{
-    display: flex;
-    flex-flow: column;
-}
-
-.formQuestion span{
-    font-size: 30px;
-}
-
-
-
-@media screen and (max-width: 768px){
-    .infoGrid{
-        display: flex;
-        flex-flow: column;
-        justify-content: space-around;
-        align-items: center;
+ @media screen and (min-height: 1300px){
+    .myForm {
+        width: 80%;
+        height: auto;
+        border-radius: 0;
+        height: 80%;
     }
-
-    .ibanText{
-        display: flex;
-        align-items: center;
-        flex-flow: column;
-        width: 100%;
+    .myCard{
+        height: 75%;
     }
-    .myIban{
-        width: 70%;
-        border-radius: 6px;
-    }
-
-    .copyButton{
-        border-radius: 6px;
-        padding:10px;
-        margin-bottom: 10px;
-    }
-
-    .myForm{
-        display: flex;
-        flex-flow: column;
-        width:100%;
-        font-family: 'Poppins';
-    }
-}
+ }

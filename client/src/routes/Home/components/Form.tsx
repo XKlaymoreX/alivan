@@ -70,36 +70,39 @@ const Form: React.FC = () => {
 
 
     return (
-        <div className="myForm rounded shadow-lg" id="myForm">
-            <div className="formQuestion">
-                <span>Siete Interessati?</span>
-                <small>Non dovete fare altro che compilare il form</small>
-            </div>
-            <div className="formRow">
-                <label className="label" htmlFor="nome" >Nome Famiglia</label>
-                <input type="Text" id="nome" onInput={(e: FormEvent<HTMLInputElement>) => {
-                    setNome(e.currentTarget.value)
-                    e.currentTarget.className = "myTextBox"
-                    setMessage('')
-                    setSuccess({ message: '', success: false })
-                }} name="nome" className="myTextBox" placeholder="Nome famiglia..." ></input>
-            </div>
-            <div className="formRow">
-                <label className="label" htmlFor="numero">Numero di Presenti</label>
-                <input type="Number" id="numero" onInput={(e: FormEvent<HTMLInputElement>) => {
-                    setNumero(parseInt(e.currentTarget.value))
-                    e.currentTarget.className = "myTextBox"
-                    e.currentTarget.style.color = '#DAA520'
-                    setMessage('')
-                    setSuccess({ message: '', success: false })
-                }} name="numero" min='1' max='10' defaultValue='0' className="myTextBox" placeholder="Numero Persone..."></input>
-            </div>
-            <small className="text-danger" >{message}</small>
-            <div className="formRow">
-                {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520' }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
-                <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
+        <div className="formSection">
+            <div className="myForm shadow-lg">
+                <div className="formQuestion">
+                    <span>Siete Interessati?</span>
+                    <small>Non dovete fare altro che compilare il form</small>
+                </div>
+                <div className="formRow">
+                    <label className="label" htmlFor="nome" >Nome Famiglia</label>
+                    <input type="Text" id="nome" onInput={(e: FormEvent<HTMLInputElement>) => {
+                        setNome(e.currentTarget.value)
+                        e.currentTarget.className = "myTextBox"
+                        setMessage('')
+                        setSuccess({ message: '', success: false })
+                    }} name="nome" className="myTextBox" placeholder="Nome famiglia..." ></input>
+                </div>
+                <div className="formRow">
+                    <label className="label" htmlFor="numero">Numero di Presenti</label>
+                    <input type="Number" id="numero" onInput={(e: FormEvent<HTMLInputElement>) => {
+                        setNumero(parseInt(e.currentTarget.value))
+                        e.currentTarget.className = "myTextBox"
+                        e.currentTarget.style.color = '#DAA520'
+                        setMessage('')
+                        setSuccess({ message: '', success: false })
+                    }} name="numero" min='1' max='10' defaultValue='0' className="myTextBox" placeholder="Numero Persone..."></input>
+                </div>
+                <small className="text-danger" >{message}</small>
+                <div className="formRowButton">
+                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520' }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
+                    <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
+                </div>
             </div>
         </div>
+
     )
 }
 

@@ -6,13 +6,9 @@ import InfoSection from './InfoSection'
 const Content: React.FC = () => {
 
     return (
-        <div className="myContent d-flex flex-column" style={{zIndex:1, background:'white'}}>
-            <div className="infoSectionContainer container-fluid" >
+        <div className="myContent d-flex flex-column align-items-center" style={{zIndex:1, background:'white'}}>
                 <InfoSection />
-            </div>
-            <div className="formSection d-flex justify-content-center" >
                 <Form />
-            </div>
         </div>
     )
 }
