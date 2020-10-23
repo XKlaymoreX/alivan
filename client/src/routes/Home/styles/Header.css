@@ -2,8 +2,6 @@
     background-image: url(../media/img2.jpg);
     background-size: cover;
     background-position: center;
-    width: 90%;
-    height: 90vh;
     filter:brightness(100%) contrast(85%) saturate(80%);
 
     font-family: 'Great Vibes';
