@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 const PORT = process.env.PORT || 3306;
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
@@ -16,12 +17,18 @@ if (process.env.NODE_ENV == "production") {
     app.use('/Private', require('./routes/private'))
     //404 Route
     app.get("*", (req, res) => {
-        res.status(404).send("Page Not Found")
+        res.status(404)
+        return res.sendFile(path.resolve('client', 'build', 'index.html'))
     })
 } else {
     app.use('/', require('./routes/home'))
     app.use('/api/v1/inviti', require('./routes/invitesList'))
     app.use('/Private', require('./routes/private'))
+    //404 Route
+    app.get("*", (req, res) => {
+        res.status(404)
+        return res.sendFile(path.resolve('client', 'build', 'index.html'))
+    })
 }
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))

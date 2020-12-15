@@ -1,6 +1,7 @@
 import React, { FormEvent } from 'react'
 import axios from 'axios'
 import { IInvitation } from '../../../types.d'
+import { Redirect } from 'react-router-dom'
 
 const Form: React.FC = () => {
 
@@ -56,7 +57,7 @@ const Form: React.FC = () => {
                 await axios.post('/api/v1/inviti', data)
                     .then(res => {
                         setIsLoading(false)
-                        setSuccess({ message: "Spedizione dell'invito Riuscita! :)", success: true })
+                        setSuccess({ message: "Spedizione dell'invito Riuscita!\n :)", success: true })
                     }).catch(err => {
                         setSuccess({ message: 'Oh no! Qualcosa è andato Storto :/', success: false })
                     })
@@ -73,8 +74,8 @@ const Form: React.FC = () => {
         <div className="formSection">
             <div className="myForm shadow-lg">
                 <div className="formQuestion">
-                    <span>Siete Interessati?</span>
-                    <small>Non dovete fare altro che compilare il form</small>
+                    <span>Siete dei Nostri?</span>
+                    <small>Compilate La Partecipazione qui sotto!</small>
                 </div>
                 <div className="formRow">
                     <label className="label" htmlFor="nome" >Nome Famiglia</label>
@@ -97,7 +98,7 @@ const Form: React.FC = () => {
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
-                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520' }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
+                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520' }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? (<Redirect to={{pathname:'/Success', state : {message : success.message} }}></Redirect>) : <span className="text-danger">{success.message}</span>}</>}
                     <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
                 </div>
             </div>
