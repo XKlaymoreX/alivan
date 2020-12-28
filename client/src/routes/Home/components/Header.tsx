@@ -12,10 +12,7 @@ const Header: React.FC = () => {
             .from(".imgSection", { filter: 'saturate(0%)', duration: 0.5 })
             .from(".welcomeText", { opacity: 0, ease: 'power2', duration: 0.5 })
             .from(".bi-chevron-compact-down", { opacity: 0, ease: 'power2', duration: 0.5 })
-
             gsap.to(".imgSectionWrapper", { scrollTrigger: { trigger: '.imgSectionWrapper', pin: true } })
-
-
     },[])
 
     return (
