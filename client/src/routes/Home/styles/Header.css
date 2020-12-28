@@ -1,18 +1,13 @@
-.imgSection {
-    background-image: url(../media/img2.jpg);
-    background-size: cover;
-    background-position: center;
-    filter:brightness(100%) contrast(85%) saturate(80%);
 
+.welcomeText{
     font-family: 'Great Vibes';
     font-size: 45px;
     color:white;
     text-shadow: 2px 2px black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: 30%;
 }
+
 
 @keyframes updown {
     0%{
@@ -30,13 +25,11 @@
 
 
 .bi-chevron-compact-down{
-    position: absolute;
-    bottom: 0;
     animation: updown infinite ease-in-out 2s;
+    position:absolute;
 }
 
 .imgSectionWrapper {
-    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
