@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ReactDOM from 'react-dom'
 interface IInfoCard {
     svg: string,
     info: string,
@@ -10,8 +10,11 @@ interface IInfoCard {
 }
 
 const InfoCard: React.FC<IInfoCard> = (props) => {
+
+
+
     return (
-        <div className="myCard rounded shadow-lg ">
+        <div className="myCard rounded shadow-lg "  data-aos="fade-up">
             <div className="myQuestion">
                 {props.questionMark}
             </div>

@@ -73,7 +73,7 @@ const Form: React.FC = () => {
         <div className="formSection">
             <div className="myForm shadow-lg">
                 <div className="formQuestion">
-                    <span>Siete Interessati?</span>
+                    <span>Siete dei nostri?</span>
                     <small>Non dovete fare altro che compilare il form</small>
                 </div>
                 <div className="formRow">
@@ -93,7 +93,7 @@ const Form: React.FC = () => {
                         e.currentTarget.style.color = '#DAA520'
                         setMessage('')
                         setSuccess({ message: '', success: false })
-                    }} name="numero" min='1' max='10' defaultValue='0' className="myTextBox" placeholder="Numero Persone..."></input>
+                    }} name="numero" min='1' max='10' defaultValue='1' className="myTextBox" placeholder="Numero Persone..."></input>
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
