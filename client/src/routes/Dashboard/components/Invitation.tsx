@@ -1,4 +1,4 @@
-import React, { HtmlHTMLAttributes } from 'react'
+import React from 'react'
 import { IDashInvitation } from '../../../types.d'
 import axios from 'axios'
 

@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useRef } from 'react'
 import axios from 'axios'
 import { IInvitation } from '../../../types.d'
 
@@ -9,7 +9,8 @@ const Form: React.FC = () => {
     const [message, setMessage] = React.useState('')
     const [isLoading, setIsLoading] = React.useState(false)
     const [success, setSuccess] = React.useState<{ message: string, success: boolean }>({ message: '', success: false })
-
+    const nameRef = useRef(null)
+    const numberRef = useRef(null)
     const validateForm = async () => {
         let validName: boolean = false
         let validNumber: boolean = false
@@ -73,12 +74,13 @@ const Form: React.FC = () => {
         <div className="formSection">
             <div className="myForm shadow-lg">
                 <div className="formQuestion">
-                    <span>Siete dei nostri?</span>
-                    <small>Non dovete fare altro che compilare il form</small>
+                    <span className=" formMargin">Sarete dei nostri?</span>
+                    <small className=" formMargin">Non dovete fare altro che compilare il form</small>
                 </div>
+                
                 <div className="formRow">
                     <label className="label" htmlFor="nome" >Nome Famiglia</label>
-                    <input type="Text" id="nome" onInput={(e: FormEvent<HTMLInputElement>) => {
+                    <input type="Text" id="nome" ref={nameRef} onInput={(e: FormEvent<HTMLInputElement>) => {
                         setNome(e.currentTarget.value)
                         e.currentTarget.className = "myTextBox"
                         setMessage('')
@@ -87,7 +89,7 @@ const Form: React.FC = () => {
                 </div>
                 <div className="formRow">
                     <label className="label" htmlFor="numero">Numero di Presenti</label>
-                    <input type="Number" id="numero" onInput={(e: FormEvent<HTMLInputElement>) => {
+                    <input type="Number" id="numero" ref={numberRef} onInput={(e: FormEvent<HTMLInputElement>) => {
                         setNumero(parseInt(e.currentTarget.value))
                         e.currentTarget.className = "myTextBox"
                         e.currentTarget.style.color = '#DAA520'

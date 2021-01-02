@@ -1,193 +1,256 @@
- /*WHOLE CONTAINER OF INFOSECTION AND FORM SECTION*/
+/*WHOLE CONTAINER OF INFOSECTION AND FORM SECTION*/
 
- .myContent {
-     height: 100vh;
- }
+.myContent {
+  height: 100vh;
+}
 
- /*INFO SECTION TAKES 50% of the entire height*/
+/*INFO SECTION TAKES 50% of the entire height*/
 
- .infoSection {
-     height: 50%;
-     width: 100%;
- }
+.infoSection {
+  height: 50%;
+  width: 100%;
+}
 
- /*FormSection Takes The 50% of the entire height*/
+/*FormSection Takes The 50% of the entire height*/
 
- .formSection {
-     height: 50%;
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-family: 'Poppins';
- }
+.formSection {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito";
+}
 
- /*PARENT is InfoSection, this takes 20% of the parent's height*/
+/*PARENT is InfoSection, this takes 20% of the parent's height*/
 
- .infoIntroduction {
-     height: 20%;
- }
+.infoIntroduction {
+  height: 20%;
+  font-size: 3em;
+  font-family: "Nunito";
+}
 
- /*PARENT is InfoSection, this takes 80% of the parent's height*/
+/*PARENT is InfoSection, this takes 80% of the parent's height*/
 
- .infoGrid {
-     height: 80%;
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
- }
+.infoGrid {
+    width: 100%;
+  height: 80%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
- /*Parent is infoGrid, this is a single Card*/
+/*Parent is infoGrid, this is a single Card*/
 
- .myCard {
-     background-color: white;
-     height: 90%;
-     width: 28%;
-     display: flex;
-     flex-flow: column;
-     justify-content: space-around;
-     font-family: 'Poppins';
-     font-size: 15px;
- }
+.myCard {
+  background-color: white;
+  height: 80%;
+  width: 28%;
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito";
+}
 
- /*FORM STYLING*/
+.cardContent {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  width: 85%;
+  margin-left: 20%;
+  height: 100%;
+  text-align: left;
+}
 
- .myForm {
-     display: flex;
-     flex-flow: column;
-     align-items: center;
-     justify-content: center;
-     width: 70%;
-     height: 90%;
-     background-color: white;
-     border-radius: 6px;
- }
+.myCard .myImage {
+  user-select: none;
+}
 
- .formQuestion {
-     width: 100%;
-     height: 25%;
-     display: flex;
-     flex-flow: column;
-     align-items: center;
-     justify-content: center;
- }
+.myCard .myInfo {
+  font-size: 1.2em;
+}
 
- .formQuestion span {
-     font-size: 30px;
- }
+.myCard .myDetails a {
+  background-color: #daa520;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em;
+}
 
- .formRow {
-     height: 25%;
-     display: flex;
-     flex-flow: column;
-     align-items: center;
-     justify-content: center;
-     width: 80%;
- }
+.myCard .myQuestion {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: rgb(34, 31, 31);
+}
 
- .formRow label {
-     height: 50%;
-     width: 100%;
-     display: flex;
-     justify-content: start;
- }
+/*FORM STYLING*/
 
- .formRow input {
-     width: 100%;
-     height: 50%;
- }
+.myForm {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 75%;
+  height: 90%;
+  background-color: white;
+  border-radius: 6px;
+}
 
- .formRowButton {
-     height: 25%;
-     width: 80%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+.formQuestion {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: #daa520;
+  color: white;
+  user-select: none;
+}
 
- .myTextBox {
-     width: 80%;
-     height: 100%;
-     border-top: none;
-     border-right: none;
-     border-left: none;
-     border-bottom: 2px solid #eee;
-     outline: none;
-     background-color: transparent;
-     color: #DAA520;
- }
+.formMargin {
+  margin-left: 10%;
+}
 
- .myTextBox::placeholder {
-     color: #DAA520;
- }
+.formQuestion span {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.formQuestion small {
+  font-size: 1em;
+  color: rgb(230, 230, 230);
+}
 
- .redPlaceHolder::placeholder {
-     color: red
- }
+.formRow {
+  height: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 80%;
+}
 
- .goButton {
-     background-color: #DAA520;
-     border: none;
-     border-radius: 6px;
-     padding: 15px;
-     color: white;
-     outline: none;
- }
+.formRow label {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: black;
+  user-select: none;
+}
 
- .goButton:active {
-     background-color: white;
-     border: 0.5px solid black;
-     color: #DAA520;
- }
+.formRow input {
+  width: 100%;
+  height: 30%;
+}
 
- @media screen and (max-width: 992px) {
-     .myContent {
-         height: 100vh;
-     }
-     .infoSection {
-         height: 70%;
-     }
-     .infoGrid {
-         display: flex;
-         flex-flow: column;
-         justify-content: space-around;
-         align-items: center;
-            
-     }
-     .formSection {
-         height: 30%;
-     }
-     .myCard {
-         font-size: 20px;
-         width: 80%;
-         height: 40%;
-         margin-top: 20px;
-         margin-bottom: 20px;
-     }
-     .myForm {
-         width: 100%;
-         height: auto;
-         border-radius: 0;
-     }
-     .formRow {
-         margin-top: 15px;
-         margin-bottom: 15px;
-     }
-     .formRowButton {
-         margin-top: 15px;
-         margin-bottom: 15px;
-     }
- }
+.formRowButton {
+  height: 25%;
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
+.myTextBox {
+  width: 80%;
+  height: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #daa520;
+  outline: none;
+  background-color: transparent;
+  color: #daa520;
+}
 
- @media screen and (min-height: 1300px){
-    .myForm {
-        width: 80%;
-        height: auto;
-        border-radius: 0;
-        height: 80%;
-    }
-    .myCard{
-        height: 75%;
-    }
- }
+.myTextBox::placeholder {
+  color: #daa520;
+}
+
+.redPlaceHolder::placeholder {
+  color: red;
+}
+
+.goButton {
+  background-color: #daa520;
+  border: none;
+  padding: 1em;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.goButton:active {
+  background-color: white;
+  border: 0.5px solid black;
+  color: #daa520;
+}
+
+@media screen and (max-width: 992px) {
+  /*INFO SECTION*/
+  .myContent {
+    height: auto;
+  }
+
+  .infoGrid {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    width: 100%;
+    margin: 1em 0 1em 0;
+  }
+
+  .formSection {
+    height: auto;
+  }
+
+  .myCard {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background-color: rgb(250, 250, 250);
+    margin: 10px 0 10px 0;
+  }
+
+  .myCard .myQuestion {
+    font-size: 2.5em;
+  }
+
+  .myCard .cardContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .myCard .myInfo {
+    font-size: 1.4em;
+  }
+
+  /*FORM SECTION*/
+
+  .myForm {
+    width: 100%;
+    height: 100%;
+  }
+
+  .formSection {
+    height: auto;
+  }
+  .formQuestion {
+    height: auto;
+    padding: 30px 0 30px 0;
+  }
+  .formRow {
+    height: 130px;
+  }
+
+  .formRowButton {
+    padding: 10px 0 30px 0;
+  }
+}

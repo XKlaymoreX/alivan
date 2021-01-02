@@ -1,6 +1,5 @@
-import React, { HtmlHTMLAttributes } from 'react'
+import React from 'react'
 import { IDashInvitation } from '../../../types.d'
-import axios from 'axios'
 
 const Invitation: React.FC<IDashInvitation> = (props) => {
 
