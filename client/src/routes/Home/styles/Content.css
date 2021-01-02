@@ -71,7 +71,7 @@
 }
 
 .myCard .myDetails a {
-  background-color: #daa520;
+  background-color:#6e0d2c;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -104,7 +104,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  background-color: #daa520;
+  background-color: #6e0d2c;
   color: white;
   user-select: none;
 }
@@ -159,14 +159,14 @@
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 2px solid #daa520;
+  border-bottom: 2px solid #6e0d2c;
   outline: none;
   background-color: transparent;
-  color: #daa520;
+  color: #6e0d2c;
 }
 
 .myTextBox::placeholder {
-  color: #daa520;
+  color: #6e0d2c;
 }
 
 .redPlaceHolder::placeholder {
@@ -174,7 +174,7 @@
 }
 
 .goButton {
-  background-color: #daa520;
+  background-color: #6e0d2c;
   border: none;
   padding: 1em;
   color: white;
@@ -186,7 +186,7 @@
 .goButton:active {
   background-color: white;
   border: 0.5px solid black;
-  color: #daa520;
+  color: #6e0d2c;
 }
 
 @media screen and (max-width: 992px) {
