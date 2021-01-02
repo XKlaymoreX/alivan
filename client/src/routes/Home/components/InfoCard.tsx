@@ -13,7 +13,7 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
 
     const [useShadow, setShadow] = React.useState(true)
 
-    React.useEffect(() => {
+   React.useEffect(() => {
         window.addEventListener('resize', () => {
             if(window.innerWidth < 992){
                 setShadow(false)
@@ -35,7 +35,7 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
             if(window.innerWidth < 992){
                 setShadow(false)
             }else{
-                setShadow(true)
+                 setShadow(true)
             }
         })
         window.removeEventListener('load', () => {
