@@ -26,7 +26,7 @@
 /*PARENT is InfoSection, this takes 20% of the parent's height*/
 
 .infoIntroduction {
-  height: 20%;
+  height: 15%;
   font-size: 3em;
   font-family: "Nunito";
 }
@@ -254,5 +254,23 @@
 
   .formRowButton {
     padding: 10px 0 30px 0;
+  }
+}
+@media screen and (max-height: 800px) {
+  /*INFO SECTION*/
+  .myContent {
+    height: auto;
+  }
+  .formRow {
+    height: 130px;
+  }
+
+  .myCard{
+    height: 400px;
+    margin: 5% 0 5% 0;
+  }
+  .formQuestion {
+    height: auto;
+    padding: 30px 0 30px 0;
   }
 }

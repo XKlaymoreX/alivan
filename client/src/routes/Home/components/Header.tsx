@@ -8,23 +8,24 @@ const Header: React.FC = () => {
 
     const yesText: CSSProperties = {
         color: "white",
-        fontSize: "8rem",
+        fontSize: "8em",
         fontFamily: "Tangerine",
         zIndex: +1,
-        position: "absolute",
         left: "10%",
         top: "30%",
-        lineHeight:".7em"
+        lineHeight:".7em",
+        userSelect:"none"
+
     }
 
     const smallText : CSSProperties ={
         zIndex: +1,
-        position: "absolute",
         left: "10%",
         top: "46%",
         color:"white",
         fontFamily:"tangerine",
-        fontSize:"3rem",
+        fontSize:"3em",
+        userSelect:"none"
         
     }
     const [useImage,setImage] = React.useState(HeaderImage)
@@ -37,25 +38,21 @@ const Header: React.FC = () => {
         window.addEventListener('resize', () => {
             if(window.innerWidth < 1380){
                 setImage(HeaderImageTwo)
-                setStyleOne((prev) => ({...prev, top:"60%"}))
-                setStyleTwo((prev) => ({...prev, top:"76%"}))
+
             }else{
                 setImage(HeaderImage)
-                setStyleOne((prev) => ({...prev, top:"30%"}))
-                setStyleTwo((prev) => ({...prev, top:"46%"}))
+
 
             }
         })
 
         window.addEventListener('load', () => {
             if(window.innerWidth < 1380){
-                setStyleOne((prev) => ({...prev, top:"60%"}))
-                setStyleTwo((prev) => ({...prev, top:"76%"}))
+
                 setImage(HeaderImageTwo)
             }else{
                 setImage(HeaderImage)
-                setStyleOne((prev) => ({...prev, top:"30%"}))
-                setStyleTwo((prev) => ({...prev, top:"46%"}))
+
             }
         })
         return 
@@ -63,23 +60,19 @@ const Header: React.FC = () => {
         window.removeEventListener('resize', () => {
             if(window.innerWidth < 1380){
                 setImage(HeaderImageTwo)
-                setStyleOne((prev) => ({...prev, top:"60%"}))
-                setStyleTwo((prev) => ({...prev, top:"76%"}))
+
             }else{
                 setImage(HeaderImage)
-                setStyleOne((prev) => ({...prev, top:"30%"}))
-                setStyleTwo((prev) => ({...prev, top:"46%"}))
+
             }
         })
         window.removeEventListener('load', () => {
             if(window.innerWidth < 1380){
-                setStyleOne((prev) => ({...prev, top:"60%"}))
-                setStyleTwo((prev) => ({...prev, top:"76%"}))
+
                 setImage(HeaderImageTwo)
             }else{
                 setImage(HeaderImage)
-                setStyleOne((prev) => ({...prev, top:"30%"}))
-                setStyleTwo((prev) => ({...prev, top:"46%"}))
+
             }
         })
 
@@ -90,13 +83,13 @@ const Header: React.FC = () => {
         <React.Fragment>
             <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
                 {/* <Navbar /> */}
-                {/* <div>
+                <div style={{position:"absolute", top:"30%", left:"8%", zIndex:+1, width:"50%", height:"30%", display:"flex", flexFlow:"column", alignItems:"center", justifyContent:"center"}}>
                     <span style={styleOne}>
-                        Benvenuti al nostro <br/> Matrimonio!
+                        Benvenuti al nostro  Matrimonio!
                     </span>
                     <span style={styleTwo}>Da Alice e Ivan</span>
-                </div> */}
-                <img src={useImage} style={{ objectFit: "cover", width: "90%", height: "90%", objectPosition: "center", filter: "brightness(100%) contrast(85%) saturate(80%)" }} />
+                </div>
+                <img src={useImage} className="rounded" style={{userSelect:"none", pointerEvents:"none" ,objectFit: "cover", width: "90%", height: "90%", objectPosition: "center", filter: "brightness(100%) contrast(85%) saturate(80%)" }} />
             </div>
         </React.Fragment>
 
