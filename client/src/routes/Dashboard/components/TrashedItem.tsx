@@ -14,7 +14,7 @@ const Invitation: React.FC<IDashInvitation> = (props) => {
     const destroyItem = async () => {
         props.loading[1](!props.loading[0])
         try {
-        await axios.delete(`/api/v1/inviti/${props._id}`)
+        await axios.delete(`/api/v1/inviti/bin/${props._id}`)
         } catch (error) {
             console.log(error)
         }

@@ -50,3 +50,14 @@ exports.deleteInvitation = async (req, res) => {
         return res.send("Could Not Delete The Element.\n Reason: 'Element Not Found!'")
     }
 }
+
+
+exports.destroyInvitation = async (req,res) => {
+        try {
+            const invitation = await binSchema.findByIdAndDelete(req.params.id)
+            return res.sendStatus(200)
+        } catch (error) {
+            res.status(500)
+            return res.send("Could Not Destroy The Element. \n Reason : 'Element Not Found!'")
+        }
+}
