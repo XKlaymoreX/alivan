@@ -12,7 +12,7 @@ const InfoSection: React.FC = () => {
                 <span>Informazioni</span>
             </div>
             <div className="infoGrid ">
-                <InfoCard svg={CalendarSVG} questionMark="Quando?" info="1 Luglio 2021|11:30am" details="Salva Evento" href={"https://calendar.google.com/event?action=TEMPLATE&tmeid=MXV1ZzJvN2c1Z21mN29lM3R0Z2k3bmxhOG4gaG96YS5jcmlzdGlhbjAxQG0&tmsrc=hoza.cristian01%40gmail.com"} />
+                <InfoCard svg={CalendarSVG} questionMark="Quando?" info="1 Luglio 2021-11:30am" details="Salva Evento" href={"https://calendar.google.com/event?action=TEMPLATE&tmeid=MXV1ZzJvN2c1Z21mN29lM3R0Z2k3bmxhOG4gaG96YS5jcmlzdGlhbjAxQG0&tmsrc=hoza.cristian01%40gmail.com"} />
                 <InfoCard svg={MapSVG} questionMark="Dove?" info="Monforte d'Alba" details="Vai alla Mappa" href={"https://goo.gl/maps/5yWbVswnEs46aqeA9"}/>
                 <InfoCard svg={RestaurantSVG} questionMark="Ristorante?" info="Ristorante 'La Torricella'" details="Vai al Sito" href={"http://www.latorricella.eu/it/"} />
             </div>
