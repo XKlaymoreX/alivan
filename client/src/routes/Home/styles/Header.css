@@ -9,6 +9,53 @@
 }
 
 
+.textContainer{
+        color: white;
+        font-size: 10vw;
+        font-family: "Tangerine";
+        z-index: +1;
+        left: 8%;
+        top: 30%;
+        user-select:none;
+        text-align:left;
+        position:absolute;
+        width:74%;
+        line-height:8vw;
+}
+
+.smallText{
+    font-size:4vw;
+}
+
+
+
+@media screen and (max-width:1380px){
+    .textContainer{
+        top:60%;
+        font-size: 15vw;
+        line-height: 10vw;
+    }
+
+    .smallText{
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width:500px){
+    .textContainer{
+        top:60%;
+        width: auto;
+        font-size: 18vw;
+        line-height: 12vw;
+    }
+
+    .smallText{
+        font-size: 8vw;
+    }
+}
+
+
+
 @keyframes updown {
     0%{
         bottom:20px;
