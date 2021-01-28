@@ -1,6 +1,6 @@
 import React, { CSSProperties, useEffect } from 'react'
 import '../styles/Header.css'
-import HeaderImage from '../media/largeCompressed.jpg'
+import HeaderImage from '../media/largeCompressed2.jpg'
 import HeaderImageTwo from '../media/smallCompressed.jpg'
 import Navbar from './Navbar'
 
@@ -50,16 +50,20 @@ const Header: React.FC = (props) => {
 
     return (
         <React.Fragment>
-            <div className="textWrapper">
-                <div className="textContainer">
-                    <span className="bigText">Benvenuti al nostro<br/> Matrimonio</span><br />
+            {/* <div className="textWrapper">
+                <div className="textContainer" >
+                    <span className="bigText">Benvenuti al nostro<br /> Matrimonio</span><br />
                     <span className="smallText">Da Alice e Ivan</span>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight:"600px" }}>
+            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "600px" }}>
                 {/* <Navbar /> */}
-                <img src={useImage} loading="lazy" className="rounded" style={{ userSelect: "none", pointerEvents: "none", objectFit: "cover", width: "90%", height: "90%", objectPosition: "center", filter: "brightness(100%) contrast(85%) saturate(80%)" }} />
+                <div className="inviteToAction" style={{ width: "100%", height: "30%", backgroundColor: "#A8808E"}}>
+                    <span>Partecipa Ora!</span>
+                </div>
+                <img src={useImage} style={{ userSelect: "none", pointerEvents: "none", objectFit: "cover", width: "100%", height: "70%", objectPosition: "center", filter: "brightness(100%) contrast(85%) saturate(100%)" }} />
+
             </div>
         </React.Fragment>
 

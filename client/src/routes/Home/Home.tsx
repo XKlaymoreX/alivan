@@ -9,6 +9,9 @@ const Home : React.FC = () => {
         <div className="Home d-flex flex-column">
             <Header  />
             <Content />
+            <footer>
+                <span>Made with ❤ by Cristian Hoza</span>
+            </footer>
         </div>
     )
 }
