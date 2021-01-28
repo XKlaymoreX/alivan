@@ -99,7 +99,7 @@ const Form: React.FC = () => {
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
-                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520' }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
+                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520', marginBottom:"20px" }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
                     <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
                 </div>
             </div>
