@@ -9,6 +9,9 @@ const Content: React.FC = () => {
         <div className="myContent d-flex flex-column " style={{zIndex:1, background:'white'}}>
                 <InfoSection />
                 <Form />
+                <footer>
+                    <span>Made with ❤ by Cristian Hoza.</span>
+                </footer>
         </div>
     )
 }

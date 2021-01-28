@@ -11,7 +11,7 @@ function App() {
 
   return (
       <Router>
-        <div className="App" style={{textAlign:"center"}}>
+        <div className="App" style={{textAlign:"center", maxWidth:"1920px", margin:"auto"}}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/Private" component={Private} />

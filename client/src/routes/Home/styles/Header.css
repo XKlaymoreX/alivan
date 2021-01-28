@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
-.welcomeText{
-    font-family: 'Great Vibes';
-    font-size: 45px;
-    color:white;
-    text-shadow: 2px 2px black;
-    position: absolute;
-    bottom: 30%;
-}
 
 
 .textContainer{
@@ -16,8 +8,8 @@
         user-select:none;
         text-align:left;
         position: relative;
-        width: 90%;
-        height: 90%;
+        width: 100vw;
+        height: 100%;
         display: flex;
         flex-flow: column;
         align-items: flex-start;
@@ -25,11 +17,33 @@
         margin-bottom: 100px;
 }
 
+.textContainer a{
+    font-family: "Poppins";
+    font-size: 35px;
+    outline: none;
+    border: none;
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: white;
+    color: black;
+}
+
+.textContainer a:link{
+    text-decoration: none;
+}
+
+.textContainer a:hover{
+    color: #58192C;
+    font-weight: bold;
+
+}
+
 .textWrapper{
     z-index: +1;
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,14 +52,14 @@
 
 .bigText{
     line-height: .8em;
-    font-size:10vw;
+    font-size:10em;
     margin-left: 5%;
 
 }
 
 .smallText{
     position: relative;
-    font-size:4vw;
+    font-size:5em;
     margin-left: 5%;
 
 }

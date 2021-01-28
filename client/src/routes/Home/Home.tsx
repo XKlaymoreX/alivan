@@ -6,7 +6,7 @@ import Header from './components/Header'
 const Home : React.FC = () => {
 
     return (
-        <div className="Home d-flex flex-column">
+        <div className="Home d-flex flex-column" style={{backgroundColor:"#ccc"}}>
             <Header  />
             <Content />
         </div>

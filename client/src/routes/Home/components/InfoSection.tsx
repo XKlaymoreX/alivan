@@ -7,7 +7,7 @@ import RestaurantSVG from '../media/svgs/restaurant.svg'
 const InfoSection: React.FC = () => {
 
     return (
-        <div className="infoSection">
+        <div className="infoSection" id="infosection">
             <div className="infoIntroduction shadow-sm d-flex justify-content-center align-items-center" style={{ fontFamily: 'Poppins'}} id="infoAnchor">
                 <span>Informazioni</span>
             </div>
