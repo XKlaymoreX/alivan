@@ -10,7 +10,7 @@ const Content: React.FC = () => {
                 <InfoSection />
                 <Form />
                 <footer>
-                    <span>Made with ❤ by Cristian Hoza.</span>
+                    <span>Website developed with ❤ by Cristian Hoza.</span>
                 </footer>
         </div>
     )

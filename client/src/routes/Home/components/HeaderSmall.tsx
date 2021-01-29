@@ -1,8 +1,6 @@
 import React, { CSSProperties, useEffect } from 'react'
 import '../styles/Header.css'
-import Navbar from './Navbar'
 import { gsap } from 'gsap'
-import { TLSSocket } from 'tls'
 
 const HeaderSmall: React.FC<{ image: string }> = ({ image }) => {
 
@@ -23,8 +21,6 @@ const HeaderSmall: React.FC<{ image: string }> = ({ image }) => {
                 },2)
                 tl.to(".img", { filter: "brightness(100%) contrast(30%) saturate(150%)", duration: .5 }, 2)
             })
-
-
     }
 
 
@@ -38,7 +34,6 @@ const HeaderSmall: React.FC<{ image: string }> = ({ image }) => {
                 </div>
             </div>
             <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "600px" }}>
-                {/* <Navbar /> */}
                 <img src={image} loading="lazy" className="img" style={{ userSelect: "none", pointerEvents: "none", objectFit: "cover", width: "100%", height: "100%", objectPosition: "center", filter: "brightness(100%) contrast(30%) saturate(150%)" }} />
             </div>
         </React.Fragment>
