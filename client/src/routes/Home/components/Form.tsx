@@ -69,6 +69,11 @@ const Form: React.FC = () => {
         }
     }
 
+    const handleKeyDown = (e:React.KeyboardEvent) => {
+        if(e.key === " " && nome.length==0){
+            e.preventDefault()
+        }
+    }
 
     return (
         <div className="formSection">
@@ -80,12 +85,12 @@ const Form: React.FC = () => {
                 
                 <div className="formRow">
                     <label className="label" htmlFor="nome" >Nome Famiglia</label>
-                    <input type="Text" id="nome" ref={nameRef} onInput={(e: FormEvent<HTMLInputElement>) => {
+                    <input type="Text"  onKeyDown={handleKeyDown} id="nome" ref={nameRef} onInput={(e: FormEvent<HTMLInputElement>) => {
                         setNome(e.currentTarget.value)
                         e.currentTarget.className = "myTextBox"
                         setMessage('')
                         setSuccess({ message: '', success: false })
-                    }} name="nome" className="myTextBox" placeholder="Nome famiglia..." ></input>
+                    }} name="nome" className="myTextBox"></input>
                 </div>
                 <div className="formRow">
                     <label className="label" htmlFor="numero">Numero di Presenti</label>
@@ -95,7 +100,7 @@ const Form: React.FC = () => {
                         e.currentTarget.style.color = '#DAA520'
                         setMessage('')
                         setSuccess({ message: '', success: false })
-                    }} name="numero" min='1' max='10' defaultValue='1' className="myTextBox" placeholder="Numero Persone..."></input>
+                    }} name="numero" min='1' max='10' defaultValue='0' className="myTextBox"></input>
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
