@@ -33,7 +33,7 @@ const HeaderSmall: React.FC<{ image: string }> = ({ image }) => {
                     <button onClick={() => handleAction()}>Partecipa 🥰</button>
                 </div>
             </div>
-            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "600px" }}>
+            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "800px" }}>
                 <img src={image} loading="lazy" className="img" style={{ userSelect: "none", pointerEvents: "none", objectFit: "cover", width: "100%", height: "100%", objectPosition: "center", filter: "brightness(100%) contrast(30%) saturate(150%)" }} />
             </div>
         </React.Fragment>

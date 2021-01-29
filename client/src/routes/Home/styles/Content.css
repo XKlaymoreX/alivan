@@ -40,7 +40,7 @@
 /*Parent is infoGrid, this is a single Card*/
 .myCard {
   background-color: white;
-  height: 85%;
+  height: 95%;
   min-height: 300px;
   width: 28%;
   display: flex;
@@ -256,13 +256,17 @@
     padding: 10px 0 30px 0;
   }
 }
-@media screen and (max-height: 800px) {
-  /*INFO SECTION*/
+
+
+@media (max-height:1200px){
   .myContent {
     height: auto;
   }
   .formRow {
-    height: 130px;
+    height: 150px;
+  }
+  .formRowButton{
+    padding: 10px 0 30px 0;
   }
 
   .myCard{

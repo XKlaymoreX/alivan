@@ -14,6 +14,7 @@
         flex-flow: column;
         align-items: flex-start;
         justify-content:center;
+        min-height: 800px;
 }
 
 .textContainer button{
@@ -44,7 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .bigText{
@@ -70,10 +71,7 @@
         justify-content:center;
         align-items: center;
     }
-    .textWrapper{
-    margin-top: 100px;
 
-    }
     .bigText{
         line-height: .8em;
         font-size:14vw;
@@ -106,30 +104,12 @@
     }
 }
 
-
-
-@keyframes updown {
-    0%{
-        bottom:20px;
+@media (max-height: 800px ){
+    .textWrapper{
+        height: 800px;
+    }    
+    .textContainer{
+        height: 800px;
     }
 
-    50%{
-        bottom:30px;
-    }
-
-    100%{
-        bottom:20px;
-    }
-}
-
-
-.bi-chevron-compact-down{
-    animation: updown infinite ease-in-out 2s;
-    position:absolute;
-}
-
-.imgSectionWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

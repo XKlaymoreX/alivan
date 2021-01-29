@@ -45,7 +45,7 @@ const HeaderLarge: React.FC<{ image: string }> = ({ image }) => {
                 </div>
             </div>
 
-            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "600px" }}>
+            <div className="imgSectionWrapper" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", minHeight: "800px" }}>
                 {/* <Navbar /> */}
                 <img src={image} loading="lazy" className="img" style={{ userSelect: "none", pointerEvents: "none", objectFit: "cover", width: "100%", height: "100%", objectPosition: "center", filter: "brightness(100%) contrast(60%) saturate(140%)" }} />
             </div>
