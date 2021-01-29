@@ -87,10 +87,16 @@
     
 }
 
+@media (max-width:768px){
+    .textContainer button {
+        font-size: 5vw;
+    }
+}
+
 @media screen and (max-width:500px){
     .bigText{
         line-height: .8em;
-        font-size:18vw;
+        font-size:15vw;
         margin-left: 5%;
     }
     
