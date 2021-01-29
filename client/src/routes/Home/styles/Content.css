@@ -1,14 +1,14 @@
 /*WHOLE CONTAINER OF INFOSECTION AND FORM SECTION*/
 
 .myContent {
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 
 /*INFO SECTION TAKES 50% of the entire height*/
 
 .infoSection {
-  height: 50%;
+  height: auto;
   width: 100%;
 }
 
@@ -26,53 +26,47 @@
 /*PARENT is InfoSection, this takes 20% of the parent's height*/
 
 .infoIntroduction {
-  height: 15%;
+  height: 100px;
   font-size: 3em;
   font-family: "Nunito";
 }
 
 /*PARENT is InfoSection, this takes 80% of the parent's height*/
 
-.infoGrid {
-    width: 100%;
-  height: 80%;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  align-items: center;
+.infoGridSmall {
+  display: none;
 }
 
 /*Parent is infoGrid, this is a single Card*/
 
-.myCard {
-  background-color: white;
-  height: 85%;
-  min-height: 300px;
-  width: 28%;
+.myCardSmall {
+  width: 100%;
+  height: 400px;
   display: flex;
-  justify-content: center;
-  font-family: "Nunito";
+  background-color: rgb(250, 250, 250);
+  margin: 10px 0 10px 0;
+  font-family: "Poppins";
 }
 
-.cardContent {
+.cardContentSmall {
+  justify-content: space-evenly;
+  text-align: left;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
-  width: 85%;
-  margin-left: 20%;
-  height: 100%;
-  text-align: left;
+  align-items: center;
+  margin-left: 0;
 }
 
-.myCard .myImage {
+ .myImageSmall {
   user-select: none;
 }
 
-.myCard .myInfo {
-  font-size: 1.2em;
+ .myInfoSmall {
+  font-size: 1.4em;
 }
-
-.myCard .myDetails a {
+ .myDetailsSmall a {
   background-color:#6e0d2c;
   color: white;
   text-decoration: none;
@@ -80,8 +74,8 @@
   padding: 0.8em;
 }
 
-.myCard .myQuestion {
-  font-size: 1.8em;
+ .myQuestionSmall {
+  font-size: 2.5em;
   font-weight: bold;
   color: rgb(34, 31, 31);
 }
@@ -95,7 +89,7 @@
   justify-content: center;
   text-align: left;
   width: 75%;
-  height: 90%;
+  height: 600px;
   background-color: white;
   border-radius: 6px;
 }
@@ -196,13 +190,101 @@
   color: #6e0d2c;
 }
 
+/*Larger DEVICE*/
+.infoGrid{
+  display: flex;
+  flex-flow: column;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.infoCard { 
+  height: 300px;
+  display: flex;
+  flex-flow: row;
+}
+
+.infoCardLeft{
+  border-right: #6e0d2c 1px solid;
+  display: flex;
+  flex-flow: column;
+}
+
+.infoCardTitle{
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 20%;
+  background-color: #6e0d2c;
+  color: white;
+}
+
+.infoCardContent{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+}
+
+.infoCardContent span{
+  font-size: 1.5em;
+  margin-left: 30px ;
+}
+
+.infoCardContent a{
+  color: white;
+  margin-left: 30px;
+  background-color: #6e0d2c;
+  padding: 15px;
+}
+
+.linkText{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.infoCardContent a:link{
+  text-decoration: none;
+}
+
+.infoCardContent a:hover{
+  color: white;
+}
+
+.infoCardTitle span{
+  margin-left: 30px;
+}
+
+.cardSection{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoCardRight img{
+  width: 40%;
+}
+
+
 @media screen and (max-width: 992px) {
   /*INFO SECTION*/
   .myContent {
     height: auto;
   }
 
-  .infoGrid {
+  .infoGridSmall {
     display: flex;
     flex-flow: column;
     height: auto;
@@ -214,30 +296,6 @@
     height: auto;
   }
 
-  .myCard {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    background-color: rgb(250, 250, 250);
-    margin: 10px 0 10px 0;
-  }
-
-  .myCard .myQuestion {
-    font-size: 2.5em;
-  }
-
-  .myCard .cardContent {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .myCard .myInfo {
-    font-size: 1.4em;
-  }
 
   /*FORM SECTION*/
 
@@ -270,10 +328,6 @@
     height: 130px;
   }
 
-  .myCard{
-    height: 400px;
-    margin: 5% 0 5% 0;
-  }
   .formQuestion {
     height: auto;
     padding: 30px 0 30px 0;
