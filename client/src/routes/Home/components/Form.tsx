@@ -59,7 +59,8 @@ const Form: React.FC = () => {
                         setIsLoading(false)
                         setSuccess({ message: "Spedizione dell'invito Riuscita! :)", success: true })
                     }).catch(err => {
-                        setSuccess({ message: 'Oh no! Qualcosa è andato Storto :/', success: false })
+                        setIsLoading(false)
+                        setSuccess({ message: `${err.response.data}`, success: false })
                     })
             } catch (error) {
                 console.log(error)
@@ -104,7 +105,7 @@ const Form: React.FC = () => {
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
-                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520', marginBottom:"20px" }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success">{success.message}</span> : <span className="text-danger">{success.message}</span>}</>}
+                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520', marginBottom:"20px" }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success" style={{margin:"20px 0 20px 0", fontWeight:"bold"}} >{success.message}</span> : <span className="text-danger" style={{margin:"20px 0 20px 0", fontWeight:"bold"}}>{success.message}</span>}</>}
                     <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
                 </div>
             </div>
