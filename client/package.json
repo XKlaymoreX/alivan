@@ -50,5 +50,5 @@
   "devDependencies": {
     "@types/jquery": "^3.5.2"
   },
-  "proxy": "http://localhost:3100"
+  "proxy": "http://localhost:3100/"
 }

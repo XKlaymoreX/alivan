@@ -6,13 +6,13 @@
 
 /*INFO SECTION TAKES 50% of the entire height*/
 .infoSection {
-  height: 50%;
+  height: 700px;
   width: 100%;
 }
 
 /*FormSection Takes The 50% of the entire height*/
 .formSection {
-  height: 50%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -89,15 +89,14 @@
   justify-content: center;
   text-align: left;
   width: 92%;
-  height: 90%;
+  height: auto;
   background-color: white;
-  border-radius: 6px;
 }
 
 
 .formQuestion {
   width: 100%;
-  height: 25%;
+  height: 150px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -120,7 +119,7 @@
 }
 
 .formRow {
-  height: 25%;
+  height: 150px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -136,11 +135,12 @@
   color: black;
   user-select: none;
   font-family: "Poppins";
+  margin-bottom: 20px;
 }
 
 .formRow input {
   width: 100%;
-  height: 30%;
+  height: 50px;
 }
 
 .formRow input:-moz-ui-invalid{
@@ -148,7 +148,7 @@
 }
 
 .formRowButton {
-  height: 25%;
+  height: 150px;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -183,6 +183,7 @@
   outline: none;
   font-weight: bold;
   font-size: 1.3em;
+  margin-bottom: 30px;
 }
 
 .goButton:active {
@@ -203,10 +204,6 @@
     height: auto;
     width: 100%;
     margin: 1em 0 1em 0;
-  }
-
-  .formSection {
-    height: auto;
   }
 
   .myCard {
@@ -234,27 +231,14 @@
     font-size: 1.4em;
   }
 
-  /*FORM SECTION*/
-
-  .myForm {
+  .myForm{
     width: 100%;
-    height: 100%;
   }
 
-  .formSection {
+  .infoSection{
     height: auto;
-  }
-  .formQuestion {
-    height: auto;
-    padding: 30px 0 30px 0;
-  }
-  .formRow {
-    height: 130px;
   }
 
-  .formRowButton {
-    padding: 10px 0 30px 0;
-  }
 }
 
 
@@ -262,21 +246,12 @@
   .myContent {
     height: auto;
   }
-  .formRow {
-    height: 150px;
-  }
-  .formRowButton{
-    padding: 10px 0 30px 0;
-  }
 
   .myCard{
     height: 400px;
     margin: 5% 0 5% 0;
   }
-  .formQuestion {
-    height: auto;
-    padding: 30px 0 30px 0;
-  }
+
 }
 
 

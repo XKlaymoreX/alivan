@@ -22,7 +22,7 @@ const Invitation: React.FC<IDashInvitation> = (props) => {
     }
 
     return (
-        <div className="row rounded shadow-sm" id={props._id} style={{ fontSize: '20px', minHeight: '50px', backgroundColor: '#eee', marginBottom: '10px' }}>
+        <div className="row rounded shadow-sm" id={props._id} style={{ fontSize: '20px', minHeight: '100px',height:"200px", backgroundColor: '#eee', marginBottom: '10px' }}>
             <div className="col-5 d-flex justify-content-center align-items-center">{props.familyName}</div>
             <div className="col-5 d-flex justify-content-center align-items-center">{props.presentsNumber}</div>
             <div className="col-2 d-flex justify-content-center align-items-center">

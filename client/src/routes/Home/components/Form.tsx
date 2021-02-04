@@ -70,23 +70,23 @@ const Form: React.FC = () => {
         }
     }
 
-    const handleKeyDown = (e:React.KeyboardEvent) => {
-        if(e.key === " " && nome.length==0){
+    const handleKeyDown = (e: React.KeyboardEvent) => {
+        if (e.key === " " && nome.length == 0) {
             e.preventDefault()
         }
     }
 
     return (
         <div className="formSection">
+
             <div className="myForm shadow-lg">
                 <div className="formQuestion">
                     <span className=" formMargin">Sarete dei nostri?</span>
                     <small className=" formMargin">Non dovete fare altro che compilare il form</small>
                 </div>
-                
                 <div className="formRow">
                     <label className="label" htmlFor="nome" >Nome Famiglia</label>
-                    <input type="Text"  onKeyDown={handleKeyDown} id="nome" ref={nameRef} onInput={(e: FormEvent<HTMLInputElement>) => {
+                    <input type="Text" onKeyDown={handleKeyDown} id="nome" ref={nameRef} onInput={(e: FormEvent<HTMLInputElement>) => {
                         setNome(e.currentTarget.value)
                         e.currentTarget.className = "myTextBox"
                         setMessage('')
@@ -105,7 +105,7 @@ const Form: React.FC = () => {
                 </div>
                 <small className="text-danger" >{message}</small>
                 <div className="formRowButton">
-                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520', marginBottom:"20px" }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success" style={{margin:"20px 0 20px 0", fontWeight:"bold"}} >{success.message}</span> : <span className="text-danger" style={{margin:"20px 0 20px 0", fontWeight:"bold"}}>{success.message}</span>}</>}
+                    {isLoading ? <span style={{ fontSize: '20px', fontFamily: 'Poppins', color: '#DAA520', marginBottom: "20px" }}>Uhmmm.. controllo se c'è spazio</span> : <>{success.success ? <span className="text-success" style={{ margin: "20px 0 20px 0", fontWeight: "bold" }} >{success.message}</span> : <span className="text-danger" style={{ margin: "20px 0 20px 0", fontWeight: "bold" }}>{success.message}</span>}</>}
                     <input type="submit" value="Partecipa!" onClick={() => validateForm()} className="goButton"></input>
                 </div>
             </div>
