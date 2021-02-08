@@ -39,8 +39,8 @@ const HeaderLarge: React.FC<{ image: string }> = ({ image }) => {
         <React.Fragment>
             <div className="textWrapper">
                 <div className="textContainer">
-                    <span className="bigText">Alice ha detto : <br /> "Si"!</span><br />
-                    <span className="smallText">Questo è il tuo invito al nostro matrimonio</span>
+                    <span className="bigText">Alice & Ivan</span><br />
+                    <span className="smallText">Vi invitiamo al nostro matrimonio!</span>
                     <button onClick={handleAction}>Partecipa 🥰</button>
                 </div>
             </div>
